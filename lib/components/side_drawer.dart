@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:html' as html;
 
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ import './knowledge-card.dart';
 import 'drawer-footer.dart';
 
 class SideDrawer extends StatelessWidget {
-  const SideDrawer({Key? key}) : super(key: key);
+  SideDrawer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,9 +41,10 @@ class SideDrawer extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const CircleAvatar(
-                      backgroundImage: NetworkImage(
-                          "https://scontent.frdp4-1.fna.fbcdn.net/v/t39.30808-1/252422862_339165371304869_9118233059854131950_n.jpg?stp=dst-jpg_p320x320&_nc_cat=109&ccb=1-7&_nc_sid=7206a8&_nc_ohc=yKD99vRb74sAX-kzuV5&_nc_ht=scontent.frdp4-1.fna&oh=00_AT9yVjWlWrnhM_QfdCR9iAmMdqFI1Yxv3vpfFoz3bgIBLQ&oe=628B8395"),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(
+                        'profile-pic.png',
+                      ),
                       radius: 50,
                     ),
                     Text(
@@ -75,7 +77,10 @@ class SideDrawer extends StatelessWidget {
                         const Divider(),
                         const KnowledgeInfo(),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () => html.window.open(
+                            "https://drive.google.com/file/d/14j9YIbUwiLsFshg_k65u3AXGX9S9kTJG/view?usp=sharing",
+                            "_blank",
+                          ),
                           child: const Text(
                             'DOWNLAOD CV',
                             style: TextStyle(color: Color(0xFAEE7A1B)),
