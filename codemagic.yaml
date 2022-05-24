@@ -16,6 +16,7 @@ workflows:
         # build web
         flutter build web --release
         cd build/web
+	firebase deploy --token "$FIREBASE_TOKEN"
         7z a -r ../web.zip ./*
     artifacts:
       - build/web.zip
