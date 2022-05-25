@@ -1,4 +1,11 @@
 # Portfolio
+This is my first flutter web project.
 
-_ underconstruction.
+## Tech Used : 
+  Flutter,
+  Firebase,
+  Github.
+## Packages Used : 
+  Google Fonts, Firebase Core, Animated Text Kit.
+
 
