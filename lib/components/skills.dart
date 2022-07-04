@@ -44,7 +44,36 @@ class _SkillsState extends State<Skills> {
                           ),
                         ),
                         Text(
-                          "0.5",
+                          "0.6",
+                          style: widget.textctx.bodyText2,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      "DevOps",
+                      style: widget.textctx.bodyText2,
+                    )
+                  ],
+                ),
+                Column(
+                  children: [
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        SizedBox(
+                          width: 55,
+                          height: 55,
+                          child: TweenAnimationBuilder<double>(
+                            tween: Tween<double>(begin: 0.0, end: 0.5),
+                            duration: const Duration(milliseconds: 600),
+                            builder: (context, value, _) =>
+                                CircularProgressIndicator(
+                                    value: value, color: Colors.white),
+                          ),
+                        ),
+                        Text(
+                          "0.7",
                           style: widget.textctx.bodyText2,
                         ),
                       ],
@@ -73,7 +102,7 @@ class _SkillsState extends State<Skills> {
                           ),
                         ),
                         Text(
-                          "0.35",
+                          "0.5",
                           style: widget.textctx.bodyText2,
                         ),
                       ],

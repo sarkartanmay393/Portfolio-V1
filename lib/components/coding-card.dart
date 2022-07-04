@@ -12,7 +12,7 @@ class _CodingCardState extends State<CodingCard> {
   Widget build(BuildContext context) {
     final textCtx = Theme.of(context).textTheme;
     return SizedBox(
-      height: 3 * 40 + 40,
+      height: 5 * 40 + 40,
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
         alignment: Alignment.topCenter,
@@ -72,6 +72,48 @@ class _CodingCardState extends State<CodingCard> {
                   children: [
                     Text("Python", style: textCtx.bodyText2),
                     Text("55%", style: textCtx.bodyText2),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(begin: 0.0, end: 0.55),
+                  duration: const Duration(milliseconds: 600),
+                  builder: (ctx, val, _) =>
+                      LinearProgressIndicator(value: val, color: Colors.white),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Bash", style: textCtx.bodyText2),
+                    Text("60%", style: textCtx.bodyText2),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                TweenAnimationBuilder<double>(
+                  tween: Tween<double>(begin: 0.0, end: 0.55),
+                  duration: const Duration(milliseconds: 600),
+                  builder: (ctx, val, _) =>
+                      LinearProgressIndicator(value: val, color: Colors.white),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Go", style: textCtx.bodyText2),
+                    Text("25%", style: textCtx.bodyText2),
                   ],
                 ),
                 const SizedBox(height: 8),

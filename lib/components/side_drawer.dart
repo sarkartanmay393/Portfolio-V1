@@ -43,7 +43,7 @@ class SideDrawer extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       backgroundImage: AssetImage(
-                        'profile-pic.png',
+                        'assets/profile-pic.png',
                       ),
                       radius: 50,
                     ),

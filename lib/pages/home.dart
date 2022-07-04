@@ -3,7 +3,6 @@ import 'dart:html' as html;
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_glow/flutter_glow.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../components/side_drawer.dart';
 
@@ -175,17 +174,37 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Container(
-              key: _projectKey,
-              width: double.infinity,
-              height: 60,
-              //height: size.height - 50 - 20,
-              margin: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                border: Border.all(color: Colors.white, width: 0.2),
-                borderRadius: BorderRadius.circular(12),
-              ),
-              child: Center(
-                child: Text("No Projects Added."),
+              height: size.height - 50,
+              child: SizedBox(
+                width: size.width * 0.4,
+                height: size.height * 0.1,
+                child: FittedBox(
+                  child: ElevatedButton(
+                    onPressed: () => html.window.open(
+                        "https://blog.tanmaysarkar.tech/",
+                        "Living as a Technician"),
+                    child: FittedBox(
+                      child: Center(
+                        child: Text(
+                          "Explore my articles",
+                          style: textctx.headline4?.merge(
+                            TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize:
+                                    size.width < MobileMaxWidth ? 16 : 24),
+                          ),
+                        ),
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      elevation: 5,
+                      // minimumSize: Size(size.width * 0.2, size.height * 0.05),
+                      fixedSize: Size(size.width * 0.4, size.height * 0.08),
+                      primary: Colors.orange.shade600,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                  ),
+                ),
               ),
             ),
             Container(
@@ -196,30 +215,32 @@ class HomePage extends StatelessWidget {
                 //border: Border.all(color: Colors.white, width: 0.2),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: Padding(
-                key: _contactKey,
-                padding: EdgeInsets.symmetric(vertical: 5),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    TextButton.icon(
-                      onPressed: () => html.window.open(
-                        "mailto:sarkartanmay393@gmail.com",
-                        "_blank",
+              child: FittedBox(
+                child: Padding(
+                  key: _contactKey,
+                  padding: EdgeInsets.symmetric(vertical: 5),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      TextButton.icon(
+                        onPressed: () => html.window.open(
+                          "mailto:hello@tanmaysarkar.tech",
+                          "_blank",
+                        ),
+                        icon: Icon(Icons.alternate_email_outlined),
+                        label: Text("hello@tanmaysarkar.tech"),
+                        style: ButtonStyle(
+                          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                          foregroundColor:
+                              MaterialStateProperty.all(Color(0xFFFF6A00)),
+                        ),
                       ),
-                      icon: Icon(Icons.alternate_email_outlined),
-                      label: Text("sarkartanmay393@gmail.com"),
-                      style: ButtonStyle(
-                        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                        foregroundColor:
-                            MaterialStateProperty.all(Color(0xFFFF6A00)),
+                      SizedBox(
+                        height: 5,
                       ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text("Made with 💚 in India"),
-                  ],
+                      Text("Made with ❤️ in India"),
+                    ],
+                  ),
                 ),
               ),
             ),
