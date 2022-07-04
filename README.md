@@ -8,7 +8,7 @@ This is my first flutter web project.
      
      Email me at sarkartanmay393@gmail.com
 
-  ##### Live at https://tanmaysarkar.me/
+  ##### Live at https://tanmaysarkar.tech/
 
 ## Tech Used : 
   Flutter,
