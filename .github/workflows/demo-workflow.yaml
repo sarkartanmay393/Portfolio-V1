@@ -7,5 +7,5 @@ jobs:
         - uses: actions/checkout@v2.4.2
         - run: sudo snap install flutter --classic
         - run: flutter sdk-path
-        - run: flutter test
+        - run: flutter build web --release
 
