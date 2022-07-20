@@ -7,6 +7,8 @@ jobs:
         - run: git clone https://github.com/sarkartanmay393/Portfolio-Web.git
         - run: cd Portfolio-Web
         - run: ls
+        - run: cd Portfolio-Web
+        - run: ls
         - run: sudo snap install flutter --classic
         - run: flutter sdk-path
         - run: flutter analyze
