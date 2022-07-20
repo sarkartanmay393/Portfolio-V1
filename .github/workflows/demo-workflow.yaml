@@ -4,10 +4,13 @@ jobs:
   build-job:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo snap install flutter --classic
-      - run: flutter sdk-path
+#       - run: sudo snap install flutter --classic
+#       - run: flutter sdk-path
       - run: pwd
-      - run: flutter analyze
-      - run: flutter build web --release
-      - run: cd build/web
+      - run: cd ..
+      - run: pwd
+      - run: ls --color=always
+#       - run: flutter analyze
+#       - run: flutter build web --release
+#       - run: cd build/web
       - run: pwd
