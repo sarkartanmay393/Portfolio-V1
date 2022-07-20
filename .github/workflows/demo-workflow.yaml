@@ -6,4 +6,5 @@ jobs:
     steps:
       - run: sudo snap install flutter --classic
       - run: flutter sdk-path
-      - run: flutter version
+      - run: pwd
+      - run: flutter analyze
