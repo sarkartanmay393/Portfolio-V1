@@ -22,9 +22,8 @@ jobs:
         # Build and Push Image
         - name: Build and Push Docker Image
           uses: docker/build-push-action@v3.1.0
-          with:
-            file: .
-            push: ${{ github.ref == 'refs/heads/main' }}
+          #with:
+            #push: ${{ github.ref == 'refs/heads/main' }}
             
         - name: Image Digest
           run: echo ${{ steps.docker_build.outputs.digest }}
