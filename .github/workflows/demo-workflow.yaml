@@ -4,7 +4,6 @@ jobs:
   build-job:
     runs-on: ubuntu-latest
     steps:
-      - run: apt update -y
       - run: sudo snap install flutter --classic
       - run: flutter sdk-path
       - run: flutter version
