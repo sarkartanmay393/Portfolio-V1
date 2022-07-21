@@ -28,10 +28,6 @@ jobs:
           run: echo ${{ steps.docker_build.outputs.digest }}
         # Deploy to Firebase hosting.
         - name: Deploy Website
-          uses: danielmillan/pipelines-firebase-hosting@1.0.8
-          with:
-            firebase-token: ${{ secrets.FIREBASE_TOKEN }}
-            resources-name: build/web
-            project-name: Portfolio-Web
+          uses: Danushka96/actions@v1.0
 
 
