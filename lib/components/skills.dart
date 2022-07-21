@@ -36,7 +36,7 @@ class _SkillsState extends State<Skills> {
                           width: 55,
                           height: 55,
                           child: TweenAnimationBuilder<double>(
-                            tween: Tween<double>(begin: 0.0, end: 0.5),
+                            tween: Tween<double>(begin: 0.0, end: 0.55),
                             duration: const Duration(milliseconds: 600),
                             builder: (context, value, _) =>
                                 CircularProgressIndicator(
@@ -44,7 +44,7 @@ class _SkillsState extends State<Skills> {
                           ),
                         ),
                         Text(
-                          "0.6",
+                          "0.55",
                           style: widget.textctx.bodyText2,
                         ),
                       ],
@@ -65,7 +65,7 @@ class _SkillsState extends State<Skills> {
                           width: 55,
                           height: 55,
                           child: TweenAnimationBuilder<double>(
-                            tween: Tween<double>(begin: 0.0, end: 0.5),
+                            tween: Tween<double>(begin: 0.0, end: 0.7),
                             duration: const Duration(milliseconds: 600),
                             builder: (context, value, _) =>
                                 CircularProgressIndicator(
@@ -94,7 +94,7 @@ class _SkillsState extends State<Skills> {
                           width: 55,
                           height: 55,
                           child: TweenAnimationBuilder<double>(
-                            tween: Tween<double>(begin: 0.0, end: 0.35),
+                            tween: Tween<double>(begin: 0.0, end: 0.45),
                             duration: const Duration(milliseconds: 600),
                             builder: (context, value, _) =>
                                 CircularProgressIndicator(
@@ -102,14 +102,14 @@ class _SkillsState extends State<Skills> {
                           ),
                         ),
                         Text(
-                          "0.5",
+                          "0.45",
                           style: widget.textctx.bodyText2,
                         ),
                       ],
                     ),
                     const SizedBox(height: 8),
                     Text(
-                      "Firebase",
+                      "Cloud",
                       style: widget.textctx.bodyText2,
                     ),
                   ],

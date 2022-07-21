@@ -26,14 +26,15 @@ class _KnowledgeInfoState extends State<KnowledgeInfo> {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("•   Git & Github", style: textCtx.subtitle2),
+                Text("•   Git", style: textCtx.subtitle2),
                 Text("•   Linux", style: textCtx.subtitle2),
                 Text("•   Docker", style: textCtx.subtitle2),
                 Text("•   Kubernetes", style: textCtx.subtitle2),
                 Text("•   Terraform", style: textCtx.subtitle2),
+                Text("•   Jenkins", style: textCtx.subtitle2),
                 // Text("•   GitOps", style: textCtx.subtitle2),
                 // Text("•   Ansible", style: textCtx.subtitle2),
-                Text("•   Azure", style: textCtx.subtitle2),
+                Text("•   Azure, AWS", style: textCtx.subtitle2),
                 Text("•   DS & Algo", style: textCtx.subtitle2),
                 Text("•   CS Fundamentals", style: textCtx.subtitle2),
               ],

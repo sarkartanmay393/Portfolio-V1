@@ -54,7 +54,7 @@ class SideDrawer extends StatelessWidget {
                           fontSize: size.width < 600 ? 16 : 22)),
                     ),
                     Text(
-                      "Flutter Developer and Designer",
+                      "DevOps Enthusiast and Flutter Developer",
                       style: textctx.bodyText2?.merge(TextStyle(
                           color: Colors.black87,
                           fontSize: size.width < 600 ? 10 : 14)),

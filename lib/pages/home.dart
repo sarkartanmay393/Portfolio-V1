@@ -152,7 +152,7 @@ class HomePage extends StatelessWidget {
                   ),
                   FittedBox(
                     child: Text(
-                      "Flutter Developer and Content Artist",
+                      "DevOps and Cloud Enthusiast",
                       style: textctx.headline3?.merge(TextStyle(
                           fontSize: size.width < MobileMaxWidth ? 18 : 30)),
                     ),
@@ -162,7 +162,7 @@ class HomePage extends StatelessWidget {
                   ),
                   FittedBox(
                     child: Text(
-                      "I design and code beautiful UI with Love.",
+                      "I code, deploy and manage beautiful UI with Love.",
                       style: textctx.subtitle1?.merge(
                         TextStyle(
                           fontSize: size.width < MobileMaxWidth ? 14 : 18,
