@@ -1,5 +1,4 @@
 FROM nginx:latest
 
-WORKDIR /usr/share/nginx/html
+COPY build/web/* /usr/share/nginx/html
 
-COPY /build/web/* .
