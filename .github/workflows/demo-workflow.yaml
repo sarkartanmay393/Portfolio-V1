@@ -1,0 +1,27 @@
+name: demo-workflow.yaml
+on: [push]
+jobs:
+  build-job:
+    runs-on: ubuntu-latest
+    steps:
+        - uses: actions/checkout@v2.4.2
+
+        # Login Docker Hub
+        - name: Login to DockerHub
+          uses: docker/login-action@v2.0.0
+          with:
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+        # Build and Push Image
+        - name: Build and Push Docker Image
+          uses: mr-smithers-excellent/docker-build-push@v5
+          with:
+            image: sarkartanmay393/portfolio-web
+            registry: docker.io
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+            
+        - name: Image Digest
+          run: echo ${{ steps.docker_build.outputs.digest }}
+
+
