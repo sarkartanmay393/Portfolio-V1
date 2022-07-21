@@ -1,5 +1,8 @@
 name: demo-workflow.yaml
-on: [push]
+on: 
+  push:
+    branches:
+      - main
 jobs:
   build-job:
     runs-on: ubuntu-latest
