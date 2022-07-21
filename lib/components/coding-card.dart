@@ -97,7 +97,7 @@ class _CodingCardState extends State<CodingCard> {
                 ),
                 const SizedBox(height: 8),
                 TweenAnimationBuilder<double>(
-                  tween: Tween<double>(begin: 0.0, end: 0.55),
+                  tween: Tween<double>(begin: 0.0, end: 0.60),
                   duration: const Duration(milliseconds: 600),
                   builder: (ctx, val, _) =>
                       LinearProgressIndicator(value: val, color: Colors.white),
@@ -113,12 +113,12 @@ class _CodingCardState extends State<CodingCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text("Go", style: textCtx.bodyText2),
-                    Text("25%", style: textCtx.bodyText2),
+                    Text("70%", style: textCtx.bodyText2),
                   ],
                 ),
                 const SizedBox(height: 8),
                 TweenAnimationBuilder<double>(
-                  tween: Tween<double>(begin: 0.0, end: 0.55),
+                  tween: Tween<double>(begin: 0.0, end: 0.70),
                   duration: const Duration(milliseconds: 600),
                   builder: (ctx, val, _) =>
                       LinearProgressIndicator(value: val, color: Colors.white),

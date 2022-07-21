@@ -62,7 +62,7 @@ class InfoCard extends StatelessWidget {
                   style: textctx.bodyText2,
                 ),
                 Text(
-                  '19',
+                  '20',
                   style: textctx.bodyText2,
                 ),
               ],
