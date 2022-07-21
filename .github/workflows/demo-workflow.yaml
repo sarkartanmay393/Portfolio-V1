@@ -5,9 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - uses: actions/checkout@v2.4.2
-        - run: sudo snap install flutter --classic
-        - run: flutter sdk-path
-        - run: flutter build web --release
 
         # Setup Docker build action
         - name: Setup Docker Buildx
