@@ -6,10 +6,6 @@ jobs:
     steps:
         - uses: actions/checkout@v2.4.2
 
-        # Setup Docker build action
-        - name: Setup Docker Buildx
-          id: buildx
-          uses: docker/setup-buildx-action@v2.0.0
         # Login Docker Hub
         - name: Login to DockerHub
           uses: docker/login-action@v2.0.0
@@ -18,9 +14,12 @@ jobs:
             password: ${{ secrets.DOCKERHUB_TOKEN }}
         # Build and Push Image
         - name: Build and Push Docker Image
-          uses: docker/build-push-action@v3.1.0
-          #with:
-            #push: ${{ github.ref == 'refs/heads/main' }}
+          uses: mr-smithers-excellent/docker-build-push@v5
+          with:
+            image: sarkartanmay393/portfolio-web
+            registry: docker.io
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
             
         - name: Image Digest
           run: echo ${{ steps.docker_build.outputs.digest }}
